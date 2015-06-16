@@ -1,6 +1,15 @@
-中期答辩/
 *.doc
 *.docx
+*.dotx
+*.tar
+~$*.*
+
+.idea/
+中期答辩/
 毕业设计 - pi 任务书/
 毕设 - 参考论文/
-.idea/
+PaperPass-VIP专业版-检测报告/
+Pi/
+docx/
+gpio/
+画图/

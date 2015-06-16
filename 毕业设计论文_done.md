@@ -1,81 +1,4 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [摘要](#%E6%91%98%E8%A6%81)
-- [Abstract](#abstract)
-- [目录](#%E7%9B%AE%E5%BD%95)
-- [第一章 绪论](#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA)
-  - [1.1 研究概括](#11-%E7%A0%94%E7%A9%B6%E6%A6%82%E6%8B%AC)
-    - [1.1.1 项目背景](#111-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF)
-    - [1.1.2 项目目的](#112-%E9%A1%B9%E7%9B%AE%E7%9B%AE%E7%9A%84)
-    - [1.1.3 项目意义](#113-%E9%A1%B9%E7%9B%AE%E6%84%8F%E4%B9%89)
-  - [1.2 发展现状](#12-%E5%8F%91%E5%B1%95%E7%8E%B0%E7%8A%B6)
-    - [1.2.1 智能家居](#121-%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85)
-    - [1.2.2 互联网+](#122-%E4%BA%92%E8%81%94%E7%BD%91)
-    - [1.2.3 移动浪潮](#123-%E7%A7%BB%E5%8A%A8%E6%B5%AA%E6%BD%AE)
-  - [1.3 研究内容](#13-%E7%A0%94%E7%A9%B6%E5%86%85%E5%AE%B9)
-    - [1.3.1 主要模块简介](#131-%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%9D%97%E7%AE%80%E4%BB%8B)
-    - [1.3.2 章节安排](#132-%E7%AB%A0%E8%8A%82%E5%AE%89%E6%8E%92)
-- [第二章 监控系统的总体设计](#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1)
-  - [2.1 系统功能分析](#21-%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90)
-    - [2.1.1 应用场景](#211-%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
-    - [2.1.2 用户需求](#212-%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82)
-  - [2.2 系统开发流程](#22-%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B)
-    - [2.2.1 总体设计思路](#221-%E6%80%BB%E4%BD%93%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF)
-    - [2.2.2 硬件模块设计](#222-%E7%A1%AC%E4%BB%B6%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1)
-    - [2.2.3 软件模块设计](#223-%E8%BD%AF%E4%BB%B6%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1)
-- [第三章 监控系统的硬件架构](#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A1%AC%E4%BB%B6%E6%9E%B6%E6%9E%84)
-  - [3.1 控制中心硬件设计](#31-%E6%8E%A7%E5%88%B6%E4%B8%AD%E5%BF%83%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1)
-    - [3.1.1 硬件平台的选择](#311-%E7%A1%AC%E4%BB%B6%E5%B9%B3%E5%8F%B0%E7%9A%84%E9%80%89%E6%8B%A9)
-    - [3.1.2 树莓派硬件结构](#312-%E6%A0%91%E8%8E%93%E6%B4%BE%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84)
-  - [3.2 采集模块硬件设计](#32-%E9%87%87%E9%9B%86%E6%A8%A1%E5%9D%97%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1)
-    - [3.2.1 温湿度传感器](#321-%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8)
-    - [3.2.2 可燃性气体传感器](#322-%E5%8F%AF%E7%87%83%E6%80%A7%E6%B0%94%E4%BD%93%E4%BC%A0%E6%84%9F%E5%99%A8)
-    - [3.2.3 粉尘浓度传感器](#323-%E7%B2%89%E5%B0%98%E6%B5%93%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8)
-  - [3.3 模数转换模块](#33-%E6%A8%A1%E6%95%B0%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9D%97)
-    - [3.3.1 数字信号与模拟信号](#331-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A8%A1%E6%8B%9F%E4%BF%A1%E5%8F%B7)
-    - [3.3.2 PCF8591模块](#332-pcf8591%E6%A8%A1%E5%9D%97)
-    - [3.3.3 Arduino模块](#333-arduino%E6%A8%A1%E5%9D%97)
-  - [3.4 硬件的连接](#34-%E7%A1%AC%E4%BB%B6%E7%9A%84%E8%BF%9E%E6%8E%A5)
-    - [3.4.1 树莓派GPIO](#341-%E6%A0%91%E8%8E%93%E6%B4%BEgpio)
-    - [3.4.2 I2C总线](#342-i2c%E6%80%BB%E7%BA%BF)
-    - [3.4.3 UART串口](#343-uart%E4%B8%B2%E5%8F%A3)
-    - [3.4.4 硬件电路结构](#344-%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF%E7%BB%93%E6%9E%84)
-- [第四章 监控系统的本地软件设计](#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9C%AC%E5%9C%B0%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1)
-  - [4.1 操作系统的安装与使用](#41-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8)
-    - [4.1.1 Linux内核简介](#411-linux%E5%86%85%E6%A0%B8%E7%AE%80%E4%BB%8B)
-    - [4.1.2 安装Raspbian系统](#412-%E5%AE%89%E8%A3%85raspbian%E7%B3%BB%E7%BB%9F)
-    - [4.1.3 网络配置流程](#413-%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B)
-    - [4.1.4 远程操控树莓派](#414-%E8%BF%9C%E7%A8%8B%E6%93%8D%E6%8E%A7%E6%A0%91%E8%8E%93%E6%B4%BE)
-  - [4.2 控制中心主程序设计](#42-%E6%8E%A7%E5%88%B6%E4%B8%AD%E5%BF%83%E4%B8%BB%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
-    - [4.2.1 整体程序框图](#421-%E6%95%B4%E4%BD%93%E7%A8%8B%E5%BA%8F%E6%A1%86%E5%9B%BE)
-    - [4.2.2 程序控制流程](#422-%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B)
-  - [4.3 传感器数据读取](#43-%E4%BC%A0%E6%84%9F%E5%99%A8%E6%95%B0%E6%8D%AE%E8%AF%BB%E5%8F%96)
-    - [4.3.1 数据采集程序](#431-%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E7%A8%8B%E5%BA%8F)
-    - [4.3.2 模数转换程序](#432-%E6%A8%A1%E6%95%B0%E8%BD%AC%E6%8D%A2%E7%A8%8B%E5%BA%8F)
-    - [4.3.3 串口读取程序](#433-%E4%B8%B2%E5%8F%A3%E8%AF%BB%E5%8F%96%E7%A8%8B%E5%BA%8F)
-  - [4.4 空气质量数据处理](#44-%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86)
-    - [4.4.1 粉尘密度算法](#441-%E7%B2%89%E5%B0%98%E5%AF%86%E5%BA%A6%E7%AE%97%E6%B3%95)
-    - [4.4.2 空气质量评定](#442-%E7%A9%BA%E6%B0%94%E8%B4%A8%E9%87%8F%E8%AF%84%E5%AE%9A)
-- [第五章 接入互联网：网络应用开发](#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%8E%A5%E5%85%A5%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91)
-  - [5.1 服务器搭建](#51-%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA)
-    - [5.1.1 网络架构](#511-%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84)
-    - [5.1.2 HTTP协议](#512-http%E5%8D%8F%E8%AE%AE)
-    - [5.1.3 内网穿透](#513-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F)
-    - [5.1.4 Web服务器](#514-web%E6%9C%8D%E5%8A%A1%E5%99%A8)
-  - [5.2 微信公众号开发](#52-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E5%BC%80%E5%8F%91)
-    - [5.2.1 微信公众号简介](#521-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%AE%80%E4%BB%8B)
-    - [5.2.2 接入微信服务器](#522-%E6%8E%A5%E5%85%A5%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%99%A8)
-    - [5.2.3 微信号功能开发](#523-%E5%BE%AE%E4%BF%A1%E5%8F%B7%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91)
-  - [5.3 Web应用开发](#53-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91)
-    - [5.3.1 数据上传与显示](#531-%E6%95%B0%E6%8D%AE%E4%B8%8A%E4%BC%A0%E4%B8%8E%E6%98%BE%E7%A4%BA)
-    - [5.3.2 智能报警功能](#532-%E6%99%BA%E8%83%BD%E6%8A%A5%E8%AD%A6%E5%8A%9F%E8%83%BD)
-- [总结与展望](#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B)
-- [致谢](#%E8%87%B4%E8%B0%A2)
-- [参考文献](#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE)
-- [附录](#%E9%99%84%E5%BD%95)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+[TOC]
 
 # 摘要
 
@@ -367,7 +290,7 @@ Arduino与树莓派通过串口通信的方式实现通信，相互传输所需�
 
 Linux是一种自由和开放源码的类UNIX操作系统内核，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。目前存在着许多不同的Linux发行版，可安装在各种各样的电脑硬件设备，从手机、平板电脑、路由器和影音游戏控制台，到桌上型电脑，大型电脑和超级电脑。Linux是一个领先的操作系统内核，世界上运算最快的10台超级电脑运行的都是基于Linux内核的操作系统。
 
-Linux得名于电脑业余爱好者Linus Torvalds。Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证,任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU工程各种工具和数据库的操作系统（也被称为GNU/Linux）。通常情况下，Linux被打包成供台式或笔记本电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。
+Linux得名于电脑业余爱好者Linus Torvalds。Linux操作系统也是自由软件和开放源代码发展中最著名的例子。只要遵循GNU通用公共许可证，任何人和机构都可以自由地使用Linux的所有底层源代码，也可以自由地修改和再发布。严格来讲，Linux这个词本身只表示Linux内核，但在实际上人们已经习惯了用Linux来形容整个基于Linux内核，并且使用GNU工程各种工具和数据库的操作系统（也被称为GNU/Linux）。通常情况下，Linux被打包成供台式或笔记本电脑和服务器使用的Linux发行版本。一些流行的主流Linux发行版本，包括Debian（及其衍生版本Ubuntu），Fedora和openSUSE等。
 
 ### 4.1.2 安装Raspbian系统
 
@@ -970,7 +893,230 @@ def warning():
 
 # 参考文献
 
+[1]陈儒敏，侯思名，颜江等.基于开源软硬件的智能家居系统设计与实现[J].现代计算机.2013
+[2]Abraham, K. Pandian, S.
+A Low-Cost Mobile Urban Environmental Monitoring System.Intelligent Systems Modelling & Simulation (ISMS).2013
+[3]Mladen Milosevic, Armen Dzhagaryan, Emil Jovanov, Aleksandar Milenković.An Environment for Automated Power Measurements on Mobile Computing Platforms.2013
+[4]Ivan Oliveira Nunes, Magnos Martinello, Antˆonio A. F. Loureiro.Designing a Low Cost Home WSN for Remote Energy Monitoring and Electronic Devices Control.2015
+[5]Luiz H. Nunes ∗, Luis H. V. Nakamura ∗, Heitor de F. Vieira ∗,
+Rafael M. de O. Libardi ∗, Edvard M. de Oliveira ∗, Julio C. Estrella ∗, Stephan Reiff-Marganiec.Performance and Energy Evaluation of RESTful Web Services in Raspberry Pi.2014
+[6]
+Sarthak Jain, Anant Vaibhav, Lovely Goyal.Raspberry Pi based Interactive Home Automation System through E-mail.2014
+[7]S. Sathya Prabha, A. John Paul Antony, M. Janaki Meena, and S. R. Pandian.Smart Cloud Robot using Raspberry Pi.2014
+[8]Fung Po Tso, David R. White, Simon Jouet, Jeremy Singer, Dimitrios P. Pezaros.The Glasgow Raspberry Pi Cloud:
+A Scale Model for Cloud Computing Infrastructures.2013
+[9]Sheikh Ferdoush, Xinrong Li.Wireless Sensor Network System Design using Raspberry Pi and Arduino for Environmental Monitoring Applications.Procedia Computer Science 34 (2014) 103 – 110
+[10]
+邢波.基于 RaspberryPi、 Zigbee技术的无线智能家居系统设计.数字技术与应用.1007-9416(2014)06-0059-02
+[11]郑世珏，徐 虹.基于Raspberry Pi的远程监测系统的设计与实现.微型机与应用.674-7720(2014)19-0105-03
+[12]􏰄􏰸􏲧􏲲􏱚􏰂􏲳􏰀􏲴􏲵􏲶􏲷􏰃􏲸􏰁􏰅􏲹􏲎李杨，郭培源，刘波，向玲孜.基于嵌入式技术的居室健康环境监测系统.《电子技术应用》2014年08期
+
+
+
+
 # 附录
 
+项目结构图：
 
+```bash
+.
+├── Adafruit_DHT
+├── __init__.py
+├── arduino_c
+│   ├── arduino_c.ino
+├── data
+│   ├── menu.json
+│   └── sensor.log
+├── ngrok
+├── sensor
+│   ├── PCF.py
+│   ├── __init__.py
+│   ├── arduino.py
+│   ├── pi_info.py
+├── server
+│   └── yeelink.py
+├── test
+│   ├── __init__.py
+│   ├── dht11_simple.py
+│   ├── dht11_subprocess.py
+│   ├── dhtreader.so
+│   ├── dhtreader_argv.py
+│   ├── link_arduino.py
+├── weixin.py
+└── werobot_session
+```
 
+微信公众号功能代码：
+
+```python
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import sys
+reload(sys)
+sys.setdefaultencoding('UTF-8')
+
+import subprocess
+import dht11
+from sensor import pi_info
+
+from smbus import SMBus
+bus = SMBus(1)
+
+import json
+import requests
+import werobot
+from werobot.client import Client
+robot = werobot.WeRoBot(token='pi', enable_session=True) 
+
+from wechat_sdk import WechatExt
+wechat = WechatExt(username='2205955115@qq.com', password='liqing123')
+
+err_msg = "出错啦，请重试！"
+
+# 获取与最新一条消息用户的对话内容
+def get_user_info():
+    user_info_json = wechat.get_top_message()
+    user_info = json.loads(user_info_json)
+    print wechat.get_dialog_message(fakeid=user_info['msg_item'][0]['fakeid'])
+
+# 主动发送消息
+def send_msg(msg="成功啦！"):
+    user_info_json = wechat.get_top_message()
+    user_info = json.loads(user_info_json)
+    print "*"*20 + "报警啦！" + "*"*20
+    try:
+        wechat.send_message(user_info['msg_item'][i]['fakeid'], msg)
+    except:
+        print 'ERROR! No more user!'
+
+def simsimi(ask):
+    baseurl = u'http://sandbox.api.simsimi.com/request.p?key=d31ca5f8-9bb2-4dab-b712-39ea43416b95&lc=ch&ft=1.0&text='
+    url = baseurl+ask
+    r = requests.get(url)
+    res = json.loads(r.text)
+    return res['response']
+
+def get_sensor_data():
+    # Reading data back
+    output = subprocess.check_output("tail ./data/sensor.log -n 1", shell = True)
+    sensor_data = eval(output)
+    print "data:", sensor_data
+    return sensor_data
+
+@robot.subscribe
+def subscribe():
+    return "Hello! 这是我的毕设：Pi的呼吸之旅"
+
+@robot.filter("报警")
+def warning():
+    send_msg()
+    return "报警啦！"
+
+@robot.text
+def first(message, session):
+    if 'last' not in session:
+        session['last'] = message.content
+        return "这是你第一次跟我说话"
+    else:
+        try:
+            reply = simsimi(message.content)
+        except:
+            reply = session['last']
+            session['last'] = message.content
+        return reply
+
+@robot.key_click("PI_INFO")
+def get_Pi_info():
+    CPU_temp = pi_info.get_CPU_temp()
+    GPU_temp = pi_info.get_GPU_temp()
+    CPU_usage = pi_info.get_CPU_use()
+    RAM_usage = pi_info.get_RAM_use()
+    DISK_percent = pi_info.get_Disk_info()[3]
+    return '''
+    CPU温度:{0} °C
+    GPU温度:{1} °C
+    CPU使用率:{2} %
+    RAM使用率:{3} %
+    硬盘使用率:{4}
+    '''.format(CPU_temp, GPU_temp, CPU_usage, RAM_usage, DISK_percent)
+
+@robot.key_click("TEMP")
+def get_air_hum():
+    sensor_data = get_sensor_data()
+    if (sensor_data):
+        return "室内温度:{0:.2f} °C".format(float(sensor_data['temp']))
+    else:
+        return err_msg
+
+@robot.key_click("HUM")
+def get_air_hum():
+    sensor_data = get_sensor_data()
+    if (sensor_data):
+        return "室内湿度:{0:.2f} %".format(float(sensor_data['hum']))
+    else:
+        return err_msg
+
+@robot.key_click("LIGHT")
+def get_air_hum():
+    #得到光照强度
+    bus.write_byte(0x48, 1) # set control register to read channel 1
+    light = bus.read_byte(0x48) # read A/D
+    if (light):
+        return "光照强度:{0:.2f} 勒克斯".format(1080 - float(light))
+    else:
+        return err_msg
+
+@robot.key_click("SWITCH")
+def switch():
+    return "open/close"
+
+@robot.key_click("PM2.5")
+def switch():
+    sensor_data = get_sensor_data()
+    PM_data = float(sensor_data['PM2_5'])
+    if (PM_data > 3000):
+        air_index = "很差"
+    elif (PM_data > 1050):
+        air_index = "差"
+    elif (PM_data > 300):
+        air_index = "一般"
+    elif (PM_data > 150):
+        air_index = "好"
+    elif (PM_data > 75):
+        air_index = "很好"
+    else:
+        air_index = "非常好"
+    if (sensor_data):
+        return "粉尘浓度：{0} ug/m3\n空气指数：{1} {2}".format(float(sensor_data['pm2.5']), float(sensor_data['PM2_5']), air_index)
+    else:
+        return err_msg
+
+@robot.key_click("CO_GAS")
+def switch():
+    sensor_data = get_sensor_data()
+    if (sensor_data):
+        return "液化气浓度：{0} ppm".format(float(sensor_data['MQ-2']))
+    else:
+        return err_msg
+
+@robot.key_click("SMOKE")
+def switch():
+    sensor_data = get_sensor_data()
+    if (sensor_data):
+        return "烟雾浓度：{0} ppm".format(float(sensor_data['MQ-5']))
+    else:
+        return err_msg
+
+@robot.click
+def click_event():
+    return "我还没有准备好！"
+
+# Reading menu data back
+with open('./data/menu.json', 'r') as f:
+    menu_data = json.load(f)
+
+client = Client("wx6eff06f20136ac85", "f2cafa0e5900a415e812ac2ef557d0f6")
+client.create_menu(menu_data)
+
+robot.run(host='0.0.0.0', port=8888)
+```
