@@ -1,0 +1,69 @@
+{
+    "button": [
+        {
+            "name": "树莓派控制",
+            "sub_button": [
+                {
+                    "type": "click",
+                    "name": "打开/关闭",
+                    "key": "SWITCH"
+                },
+                {
+                    "type": "click",
+                    "name": "控制面板",
+                    "key": "CONTROL"
+                },
+                {
+                    "type": "click",
+                    "name": "设备信息",
+                    "key": "PI_INFO"
+                }
+            ]
+        },
+        {
+            "name": "数据采集",
+            "sub_button": [
+                {
+                    "type": "click",
+                    "name": "PM2.5",
+                    "key": "PM2.5"
+                },
+                {
+                    "type": "click",
+                    "name": "液化气",
+                    "key": "CO_GAS"
+                },
+                {
+                    "type": "click",
+                    "name": "烟雾",
+                    "key": "SMOKE"
+                },
+                {
+                    "type": "click",
+                    "name": "温湿度",
+                    "key": "TEMPERATURE"
+                },
+                {
+                    "type": "click",
+                    "name": "湿度",
+                    "key": "HUMIDITY"
+                }
+            ]
+        },
+        {
+            "name": "关于我",
+            "sub_button": [
+                {
+                    "type": "click",
+                    "name": "简历",
+                    "key": "RESUME"
+                },
+                {
+                    "type": "view",
+                    "name": "博客",
+                    "url": "http://blog.jimmylv.info"
+                }
+            ]
+        }
+    ]
+}

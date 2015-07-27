@@ -1,0 +1,74 @@
+{
+    "button": [
+        {
+            "name": "树莓派控制",
+            "sub_button": [
+                {
+                    "type": "click",
+                    "name": "打开/关闭",
+                    "key": "SWITCH"
+                },
+                {
+                    "type": "click",
+                    "name": "工作状态",
+                    "key": "PI_INFO"
+                },
+                {
+                    "type": "view",
+                    "name": "信息面板",
+                    "url": "http://www.yeelink.net/devices/20814"
+                }
+            ]
+        },
+        {
+            "name": "数据采集",
+            "sub_button": [
+                {
+                    "type": "click",
+                    "name": "PM2.5",
+                    "key": "PM2.5"
+                },
+                {
+                    "type": "click",
+                    "name": "液化气",
+                    "key": "CO_GAS"
+                },
+                {
+                    "type": "click",
+                    "name": "烟雾",
+                    "key": "SMOKE"
+                },
+                {
+                    "type": "click",
+                    "name": "温度",
+                    "key": "TEMP"
+                },
+                {
+                    "type": "click",
+                    "name": "湿度",
+                    "key": "HUM"
+                }
+            ]
+        },
+        {
+            "name": "关于我",
+            "sub_button": [
+                {
+                    "type": "view",
+                    "name": "毕设",
+                    "url": "https://github.com/JimmyLv/graduation-project-paper/blob/master/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E8%AE%BA%E6%96%87.md"
+                },
+                {
+                    "type": "click",
+                    "name": "简历",
+                    "key": "RESUME"
+                },
+                {
+                    "type": "view",
+                    "name": "博客",
+                    "url": "http://blog.jimmylv.info"
+                }
+            ]
+        }
+    ]
+}
